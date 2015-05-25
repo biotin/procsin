@@ -1,6 +1,15 @@
 require 'sinatra'
 require 'sinatra/param'
 
+get '/' do
+  erb :index
+end
+
+not_found do
+  erb :notfound
+end
+
+
 get '/procam' do
   erb :procam
 end
