@@ -16,5 +16,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  rack
   sinatra (= 1.4.6)
   sinatra-param (= 1.4.0)
