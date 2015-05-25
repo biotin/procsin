@@ -1,4 +1,5 @@
 require 'sinatra'
+require 'sinatra/param'
 
 get '/procam' do
   erb :procam
@@ -6,6 +7,16 @@ end
 
 
 post '/result' do
+    
+    param :niko,    String, required: true
+    param :sugar,   String, required: true
+    param :fam,     String, required: true
+    
+    param :age,     Integer, min: 20, max: 65
+    param :sys,     Integer, min: 60, max: 260
+    param :try,     Integer, min: 0, max: 999
+    param :hdl,     Integer, min: 0, max: 999
+    param :ldl,     Integer, min: 0, max: 999
     
     @age = params[:age].to_i
     @sys = params[:sys].to_i
@@ -21,7 +32,7 @@ post '/result' do
     @line2 = ""
     
     if @age >= 40 and @age <= 44
-    @punkt = @punkt + 6
+        @punkt = @punkt + 6
     elsif  @age >= 45 and @age <= 49
         @punkt = @punkt + 11
     elsif @age >= 50 and @age <= 54
