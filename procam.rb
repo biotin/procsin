@@ -42,15 +42,15 @@ post '/result' do
         @punkt = @punkt + 8
     end
     
-    if @niko === "y"
+    if @niko === "Yes"
         @punkt = @punkt + 8
     end
 
-    if @sugar === "y"
+    if @sugar === "Yes"
         @punkt = @punkt + 6
     end
 
-    if @fam === "y"
+    if @fam === "Yes"
         @punkt = @punkt + 4
     end
     
