@@ -6,7 +6,7 @@ get '/' do
 end
 
 not_found do
-  erb :notfound
+  erb :notfound, :layout => false
 end
 
 
